@@ -1,0 +1,12 @@
+
+.test{
+	display: block;
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+@media (max-width: 768px){
+	a{
+		color: black;
+	}
+}
