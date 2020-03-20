@@ -1,6 +1,11 @@
-
+body,html{
+	height: 100%;
+	/*overflow-y: auto;*/
+}
 body{
 	font-family: Ubuntu;
+	font-size: 14px;
+	color: #2D2D2D;
 }
 header{
 	height: 925px;
@@ -186,6 +191,26 @@ h1{
 	border-radius: 65px;
 	padding: 0;
 }
+.btn-stage{
+	display: inline-block;
+	min-width: 280px;
+	max-width: 300px;
+	text-align: center;
+	height: 75px;
+	line-height: 75px;
+	color: #2D2D2D;
+	font-size: 20px;
+	cursor: pointer;
+	-webkit-border-radius: 65px;
+	border-radius: 65px;
+	border: 2px solid #FF4500;
+	vertical-align: top;
+}
+.btn-stage:hover,
+.btn-stage.active{
+	background: #FF4500;
+	color: #fff;
+}
 .get_price-big{
 	width: 390px;
 	height: 84px;
@@ -323,9 +348,199 @@ h1{
 }
 .advantages-list{
 	padding-top: 75px;
+	padding-bottom: 185px;
 }
 .advantages-item{
+	position: relative;
+	display: inline-block;
 	width: 370px;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 50px rgba(230, 171, 138, 0.4);
+	box-shadow: 0px 0px 50px rgba(230, 171, 138, 0.4);
+	-webkit-border-radius: 29px;
+	border-radius: 29px;
+	vertical-align: middle;
+	min-height: 710px;
+	overflow: hidden;
+	margin-right: 20px;
+}
+.advantages-item:last-child{
+	margin-right: 0;
+}
+.advantages-item.with-img{
+	padding-top: 115px;
+	padding-bottom: 20px;
+}
+.advantages-item.with-img:after{
+	content: '';
+	max-width: 205px;
+	display: block;
+	height: 9px;
+	background: #ff4500;
+	-webkit-border-radius: 65px;
+	border-radius: 65px;
+	margin: 0 auto;
+}
+.advantages-item.with-img img{
+	display: block;
+	margin: 0 auto;
+	max-height: 230px;
+}
+.advantages-item.with-img .advantages-name{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #000;
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 500;
+	max-width: 80%;
+	margin: 0 auto;
+	line-height: 34px;
+	margin-top: 135px;
+	margin-bottom: 115px;
+	min-height: 85px;
+}
+
+.advantages-item.with-text:before{
+	content: '';
+	max-width: 205px;
+	display: block;
+	height: 9px;
+	background: #ff4500;
+	-webkit-border-radius: 65px;
+	border-radius: 65px;
+	margin: 0 auto
+}
+.advantages-item.with-text .advantages-name{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #000;
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 500;
+	max-width: 80%;
+	margin: 0 auto;
+	line-height: 34px;
+	min-height: 85px;
+	margin-bottom: 70px;
+}
+.advantages-item-descr{
+	padding: 0 15px;
+	line-height: 20px;
+	font-size: 17px;
+	font-weight: 300;
+}
+.advantages-item ul{
+	list-style: none;
+	color: #FF4500;
+}
+.advantages-item ul li{
+	font-size: 17px;
+	font-weight: 500;
+}
+.advantages-item ul li:before{
+	display: inline-block;
+	content: '';
+	width: 5px;
+	height: 5px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: #FF4500;
+	vertical-align: middle;
+	margin-right: 7px;
+}
+.section.howbuy{
+	padding-top: 210px;
+}
+
+.howbuy-left{
+	padding: 0;
+}
+.howbuy-right{
+	padding: 0;	
+}
+.howbuy-stage{
+	position: relative;
+	margin-bottom: 50px;
+}
+.howbuy-stage:last-child{
+	margin-bottom: 0;
+}
+.stage-tooltip{
+	display: none;
+	position: absolute;
+	min-height: 210px;
+	z-index: 500;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 50px rgba(151, 151, 151, 0.4);
+	box-shadow: 0px 0px 50px rgba(151, 151, 151, 0.4);
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding-left: 60px;
+	padding-right: 50px;
+	padding-top: 70px;
+	padding-bottom: 40px;
+	max-width: 400px;
+	right: -70%;
+	top: -20%;
+}
+.btn-stage.active + .stage-tooltip,
+.btn-stage:hover + .stage-tooltip{
+	display: block;
+}
+.stage-tooltip:before{
+	display: block;
+	position: absolute;
+	content: '';
+	top: 0;
+	border: 15px solid transparent; 
+	border-right: 15px solid #fff;
+	left: -30px;
+	top: 45px;
+}
+.stage-tooltip .close{
+	position: absolute;
+	background: url(../../src/images/close_tooltip.png);
+	width: 33px;
+	height: 33px;
+	opacity: 1;
+	right: 25px;
+	top: 25px;
+}
+.stage-tooltip p{
+	font-size: 20px;
+	font-weight: 300;
+	color: #2D2D2D;
+}
+.howbuy-stage-cnt{
+	font-size: 80px;
+	color: #FF4500;
+	font-weight: 600;
+	line-height: 1;
+	vertical-align: bottom;
+	margin-right: 20px;
 }
 /**/
 @media (min-width: 1200px){
