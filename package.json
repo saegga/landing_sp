@@ -5,11 +5,18 @@
   "main": "index.js",
   "dependencies": {
     "del": "^4.1.1",
+<<<<<<< HEAD
     "gulp": "^4.0.2",
+=======
+>>>>>>> 84cac0e0cd534e0ca26d5a617a27a13c7a5dbfd1
     "uglify-js": "^3.5.13"
   },
   "devDependencies": {
     "browser-sync": "^2.26.5",
+<<<<<<< HEAD
+=======
+    "gulp": "^4.0.2",
+>>>>>>> 84cac0e0cd534e0ca26d5a617a27a13c7a5dbfd1
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
