@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 	var widthMap = $(window).outerWidth() - $('.footer-left').get(0).getBoundingClientRect().right - 30;
 	$('.map').width(widthMap);
-	
+
 	$('.btn-stage').hover(function(){
 		$('.stage-tooltip').hide();
 		$('.btn-stage').removeClass('active');
@@ -22,6 +22,11 @@ $(document).ready(function(){
 		if($(this).height() > 400){
 			$(this).css({'width' : '540', 'max-width' : 'unset', 'right': '-97%', 'padding-top' : '30px'});
 		}
+	});
+
+	$('.down').on('click', function(e){
+		e.preventDefault();
+		$('body, html').animate({scrollTop: $('#brands').offset().top}, 500);
 	});
 
 });
