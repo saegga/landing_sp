@@ -1,6 +1,7 @@
 body,html{
-	height: 100%;
-	/*overflow-y: auto;*/
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 body{
 	font-family: Ubuntu;
@@ -797,9 +798,88 @@ footer{
 	padding-top: 50px;
 }
 
-/**/
+@media(max-width: 1700px){
+	.howbuy-right img{
+		/*max-width: 100%;*/
+		max-width: 750px;
+		left: 30px;
+	}
+}
+@media (min-width: 991px) and (max-width: 1200px){
+	.section.brands{
+		margin-top: 90px;
+	}
+	.section.brands .heading-block-white{
+		padding-bottom: 60px;
+	}
+	.brands-list .brand-item:nth-child(3),
+	.brands-list .brand-item:nth-child(6){
+		margin-right: 0;
+	}
+	.brands-list .brand-item:nth-child(4){
+		margin-right: 35px;
+	}
+	.section.advantages{
+		padding-top: 90px;
+	}
+	.advantages-list{
+		padding-bottom: 155px;
+	}
+	.advantages-item{
+		width: 285px;
+		margin-right: 13px;
+		min-height: 780px;
+	}
+	.advantages-item.with-img .advantages-name{
+		margin-bottom: 175px;
+	}
+	.section.howbuy{
+		padding-top: 140px;
+	}
+	.section.howbuy .col-lg-5{
+		-ms-flex: 0 0 44.666667%;
+		    flex: 0 0 44.666667%;
+		    max-width: 44.666667%;
+	}
+	.section.howbuy .col-lg-7{
+		-ms-flex: 0 0 54.333333%;
+		    flex: 0 0 54.333333%;
+		    max-width: 54.333333%;
+	}
+	footer{
+		margin-top: 195px;
+	}
+}
+
 @media (min-width: 1200px){
 	.container {
 	    min-width: 1190px;
 	}
 }
+@media (min-width: 992px){
+	.container {
+		max-width: 920px;
+	}
+}
+@media(min-width: 768px) and (max-width: 991px){
+	.top_line .logo{
+		margin-right: 20px;
+	}
+	.top_line .choice_lang{
+		margin-left: 30px;
+	}
+}
+@media(min-width: 767px){
+	.top-col{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.top_line .logo{
+		margin-right: 0;
+	}
+	.top_line .choice_lang{
+		margin-left: 0;
+	}
+}
+
