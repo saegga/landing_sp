@@ -1,5 +1,9 @@
 $(document).ready(function(){
 	
+
+	var widthMap = $(window).outerWidth() - $('.footer-left').get(0).getBoundingClientRect().right - 30;
+	$('.map').width(widthMap);
+	
 	$('.btn-stage').hover(function(){
 		$('.stage-tooltip').hide();
 		$('.btn-stage').removeClass('active');
