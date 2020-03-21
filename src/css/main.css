@@ -914,10 +914,15 @@ footer{
 		height: 690px;
 		background: url(../../src/images/mob_banner.png) center center/cover  no-repeat ;
 	}
+/*	main{
+		margin-bottom: -450px;
+	}*/
 	.header-btn{
 		padding-top: 60px;
 	}
 	.get_price-big{
+		display: block;
+		margin: 0 auto;
 		height: 70px;
 		line-height: 70px;
 		max-width: 285px;
@@ -998,7 +1003,9 @@ footer{
 	}
 	/* todo advatages*/
 	.section.howbuy{
+		position: relative;
 		padding-top: 75px;
+		z-index: 400;
 	}
 	.howbuy-stage.active{
 		margin-bottom: 0;
@@ -1007,6 +1014,9 @@ footer{
 		min-width: 215px;
 		max-width: 215px;
 		font-size: 16px;
+	}
+	.howbuy-stages{
+		padding-bottom: 50px;
 	}
 	.howbuy-stage:after{
 		content: '';
@@ -1043,6 +1053,28 @@ footer{
 		position: relative;
 		background: #fff;
 		z-index: 100;
+	}
+	.mob_howbuy-img{
+		top: -275px;
+		background-image: url(../../src/images/drop.png);
+		background-position: center;
+		background-position-y: -70px;
+		position: relative;
+		left: 0;
+		width: 100%;
+		z-index: 135;
+		height: 695px;
+		background-size: 190%;
+		background-repeat: no-repeat;
+	}
+	.mob_howbuy-img img{
+	    position: absolute;
+	    bottom: 40px;
+	    right: 30px;
+	}
+	footer{
+		margin-top: -260px;
+		box-shadow: none;
 	}
 
 }

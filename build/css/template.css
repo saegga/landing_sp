@@ -265,6 +265,7 @@ h1{
 	margin-left: 15px;
 }
 .mob_write_us{
+	position: relative;
 	height: 70px;
 	line-height: 70px;
 	border: 1px solid #FFFFFF;
@@ -276,10 +277,23 @@ h1{
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: 600;
+	margin-top: 15px;
+}
+.mob_write_us:hover,
+.mob_write_us:after{
+	color: #2D2D2D;
+	background: #fff;
+	text-decoration: none;
 }
 .mob_write_us:after{
+	position: absolute;
 	content: '';
-	background: url('../../src/images/top_write_us.png'); 
+	display: block;
+	width: 53px;
+	height: 53px;
+	background: url('../../src/images/mob_msg.png'); 
+	right: 10px;
+	top: 7px;
 }
 /**/
 
@@ -943,6 +957,9 @@ footer{
 		    flex: 0 0 54.333333%;
 		    max-width: 54.333333%;
 	}
+	.stage-tooltip{
+		right: -110%;
+	}
 	footer{
 		margin-top: 195px;
 	}
@@ -965,16 +982,26 @@ footer{
 	.top_line .choice_lang{
 		margin-left: 30px;
 	}
+	.stage-tooltip{
+		max-width: 320px;
+		right: -5%;
+		padding: 40px 10px 20px 10px;
+	}
 }
 @media(max-width: 767px){
-
 	h1{
 		font-size: 40px;
+	}
+	header{
+		height: 690px;
+		background: url(../../src/images/mob_banner.png) center center/cover  no-repeat ;
 	}
 	.header-btn{
 		padding-top: 60px;
 	}
 	.get_price-big{
+		display: block;
+		margin: 0 auto;
 		height: 70px;
 		line-height: 70px;
 		max-width: 285px;
@@ -1008,6 +1035,152 @@ footer{
 	.top_addres .top_addres-phone span{
 		font-size: 12px;
 	}
+	.heading-block-white p,
+	.heading-block-orange p{
+		font-size: 28px;
+	}
+	.section.brands{
+		margin-top: 50px;
+	}
+	.heading-block-white{
+		padding-bottom: 40px;
+	}
+	.brands-list{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.brands-list .brand-item{
+		margin-right: 4%;
+		max-width: 48%;
+		padding-bottom: 12px;
+		padding-top: 20px;
+		margin-bottom: 20px;
+	}
+	.brands-list .brand-item:nth-child(even){
+		margin-right: 0;
+	}
+	.brands-list .brand-item .brand-img{
+		height: 165px;
+	}
+	.brands-list .brand-item img{
+		max-height: 100%;
+	}
+	.brand-item .brand-info{
+		padding-top: 10px;
+	}
+	.brand-name{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		min-height: 48px;
+		line-height: 19px;
+		font-size: 14px;
+		overflow: hidden;
+	}
+	.brand-get-price{
+		max-width: 145px;
+		margin: 5px auto 0;
+	}
+	.section.advantages{
+		margin-top: 90px;
+		padding-top: 50px;
+	}
+	.advantages-list{
+		padding-top: 70px;
+	}
+	/* todo advatages*/
+	.section.howbuy{
+		position: relative;
+		padding-top: 75px;
+		z-index: 400;
+	}
+	.howbuy-stage.active{
+		margin-bottom: 0;
+	}
+	.btn-stage{
+		min-width: 215px;
+		max-width: 215px;
+		font-size: 16px;
+	}
+	.howbuy-stages{
+		padding-bottom: 50px;
+	}
+	.howbuy-stage:after{
+		content: '';
+		top: 80px;
+		left: 45px;
+		display: block;
+		position: absolute;
+		height: 100%;
+		border: 1px dashed #ADADAD;;
+		z-index: 5;
+	}
+	.howbuy-stage:last-child:after{
+		display: none;
+	}
+	.stage-tooltip{
+		position: static;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 0;
+		max-width: 60%;
+		margin-left: 30%;
+	}
+	.stage-tooltip p{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		min-height: 180px;
+		font-size: 14px;
+		line-height: 20px;
+		padding: 20px 0;
+	}
+	.stage-tooltip .close{
+		display: none;
+	}
+	.howbuy-stage-cnt{
+		position: relative;
+		background: #fff;
+		z-index: 100;
+	}
+	.mob_howbuy-img{
+		top: -275px;
+		background: url(../../src/images/drop.png);
+		background-position: center;
+		background-position-y: -100px;
+		position: relative;
+		left: 0;
+		width: 100%;
+		z-index: 135;
+		height: 695px;
+		-webkit-background-size: 190% 190%;
+		background-size: 190%;
+		background-repeat: no-repeat;
+	}
+
 }
 
 
