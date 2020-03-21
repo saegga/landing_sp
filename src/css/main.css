@@ -26,7 +26,7 @@ h1{
 	color: #fff;
 	font-weight: bold;
 }
-.header-h1{
+.headed_line{
 	padding-top: 170px;
 	max-width: 600px;
 }
@@ -210,7 +210,6 @@ h1{
 	font-size: 22px;
 	font-weight: bold;
 	transition: box-shadow 0.2s, background .2s ease;
-
 }
 
 .get_price-big:hover{
@@ -243,6 +242,36 @@ h1{
 	margin-top: 115px;
 	background: url('../../src/images/down.png');
 	margin-left: 15px;
+}
+.mob_write_us{
+	position: relative;
+	height: 70px;
+	line-height: 70px;
+	border: 1px solid #FFFFFF;
+	border-radius: 65px;
+	max-width: 285px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-top: 15px;
+}
+.mob_write_us:hover,
+.mob_write_us:after{
+	color: #2D2D2D;
+	background: #fff;
+	text-decoration: none;
+}
+.mob_write_us:after{
+	position: absolute;
+	content: '';
+	display: block;
+	width: 53px;
+	height: 53px;
+	background: url('../../src/images/mob_msg.png'); 
+	right: 10px;
+	top: 7px;
 }
 /**/
 
@@ -869,7 +898,22 @@ footer{
 		margin-left: 30px;
 	}
 }
-@media(min-width: 767px){
+@media(max-width: 767px){
+	h1{
+		font-size: 40px;
+	}
+	header{
+		height: 690px;
+		background: url(../../src/images/mob_banner.png) center center/cover  no-repeat ;
+	}
+	.header-btn{
+		padding-top: 60px;
+	}
+	.get_price-big{
+		height: 70px;
+		line-height: 70px;
+		max-width: 285px;
+	}
 	.top-col{
 		display: flex;
 		justify-content: space-between;
@@ -878,8 +922,74 @@ footer{
 	.top_line .logo{
 		margin-right: 0;
 	}
+	.top_line .logo img{
+		max-width: 115px;
+	}
 	.top_line .choice_lang{
 		margin-left: 0;
 	}
+	.top_addres .top_addres-geo span{
+		font-size: 13px;
+	}
+	.top_addres .top_addres-phone span{
+		font-size: 12px;
+	}
+	.heading-block-white p,
+	.heading-block-orange p{
+		font-size: 28px;
+	}
+	.section.brands{
+		margin-top: 50px;
+	}
+	.heading-block-white{
+		padding-bottom: 40px;
+	}
+	.brands-list{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.brands-list .brand-item{
+		margin-right: 4%;
+		max-width: 48%;
+		padding-bottom: 12px;
+		padding-top: 20px;
+		margin-bottom: 20px;
+	}
+	.brands-list .brand-item:nth-child(even){
+		margin-right: 0;
+	}
+	.brands-list .brand-item .brand-img{
+		height: 165px;
+	}
+	.brands-list .brand-item img{
+		max-height: 100%;
+	}
+	.brand-item .brand-info{
+		padding-top: 10px;
+	}
+	.brand-name{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 48px;
+		line-height: 19px;
+		font-size: 14px;
+		overflow: hidden;
+	}
+	.brand-get-price{
+		max-width: 145px;
+		margin: 5px auto 0;
+	}
+	.section.advantages{
+		margin-top: 90px;
+		padding-top: 50px;
+	}
+	.advantages-list{
+		padding-top: 70px;
+	}
+	/* todo advatages*/
+
+	
 }
 
