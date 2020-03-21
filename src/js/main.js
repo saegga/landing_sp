@@ -7,8 +7,13 @@ $(document).ready(function(){
 	$('.btn-stage').hover(function(){
 		$('.stage-tooltip').hide();
 		$('.btn-stage').removeClass('active');
+		$('.howbuy-stage').removeClass('active');
+
 		$(this).parent().find('.stage-tooltip').show();
+
+		$(this).parent().addClass('active');
 		$(this).addClass('active');
+
 	}, function(){
 		// $(this).removeClass('active');
 	});
@@ -17,12 +22,13 @@ $(document).ready(function(){
 		e.preventDefault();
 		$(this).parent().hide();
 	});
-
-	$('.stage-tooltip').each(function(index){
-		if($(this).height() > 400){
-			$(this).css({'width' : '540', 'max-width' : 'unset', 'right': '-97%', 'padding-top' : '30px'});
-		}
-	});
+	if($(window).outerWidth() > 768){
+		$('.stage-tooltip').each(function(index){
+			if($(this).height() > 400){
+				$(this).css({'width' : '540', 'max-width' : 'unset', 'right': '-97%', 'padding-top' : '30px'});
+			}
+		});
+	}
 
 	$('.down').on('click', function(e){
 		e.preventDefault();
