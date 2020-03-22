@@ -2,7 +2,7 @@ $(document).ready(function(){
 	
 
 	var widthMap = $(window).outerWidth() - $('.footer-left').get(0).getBoundingClientRect().right - 30;
-	if($(window).outerWidth() > 768){
+	if($(window).outerWidth() > 991){
 		$('.map').width(widthMap);
 	}
 	
@@ -36,6 +36,16 @@ $(document).ready(function(){
 	$('.down').on('click', function(e){
 		e.preventDefault();
 		$('body, html').animate({scrollTop: $('#brands').offset().top}, 500);
+	});
+
+	$('.advantages-item').on('click', function(){
+		if($(this).hasClass('closes')){
+			$(this).removeClass('closes');
+			$(this).addClass('open');
+		}else{
+			$(this).addClass('closes');
+			$(this).removeClass('open');
+		}
 	});
 
 });

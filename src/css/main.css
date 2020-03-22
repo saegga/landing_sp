@@ -21,6 +21,9 @@ p, ul, li, h1, label{
 	margin: 0;
 	padding: 0;
 }
+b{
+	font-weight: 600;
+}
 h1{
 	font-size: 80px;
 	color: #fff;
@@ -387,15 +390,26 @@ h1{
 	min-height: 710px;
 	overflow: hidden;
 	margin-right: 20px;
+	cursor: pointer;
 }
 .advantages-item:last-child{
 	margin-right: 0;
 }
-.advantages-item.with-img{
+
+.advantages-preview img{
+	display: block;
+	margin: 0 auto;
+	max-height: 230px;
+}
+
+.advantages-preview{
+	position: absolute;
+	width: 100%;
+	height: 100%;
 	padding-top: 115px;
 	padding-bottom: 20px;
 }
-.advantages-item.with-img:after{
+.advantages-item.closes .advantages-preview:after{
 	content: '';
 	max-width: 205px;
 	display: block;
@@ -404,12 +418,41 @@ h1{
 	border-radius: 65px;
 	margin: 0 auto;
 }
-.advantages-item.with-img img{
-	display: block;
-	margin: 0 auto;
-	max-height: 230px;
+
+.advantages-text{
+	position: absolute;
+	padding-top: 20px;
+	bottom: 0;
+
+	transition: bottom .3s ease;
 }
-.advantages-item.with-img .advantages-name{
+.advantages-item.open .advantages-text:before{
+	content: '';
+	max-width: 205px;
+	display: block;
+	height: 9px;
+	background: #ff4500;
+	border-radius: 65px;
+	margin: 0 auto;
+}
+.advantages-item.open .advantages-text{
+	height: 100%;
+}
+.advantages-item.open .advantages-preview{
+	top: -100%;
+	transition: top 0.3s ease;
+}
+.advantages-item.closes .advantages-preview{
+	top: 0;
+	transition: top 0.3s ease;
+}
+.advantages-item.closes .advantages-text{
+	bottom: -100%;
+	height: 0;
+	transition: bottom .3s ease;
+}
+
+.advantages-item.closes .advantages-name{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -425,19 +468,8 @@ h1{
 	margin-bottom: 115px;
 	min-height: 85px;
 }
-.advantages-item.with-text{
-	padding-top: 20px;
-}
-.advantages-item.with-text:before{
-	content: '';
-	max-width: 205px;
-	display: block;
-	height: 9px;
-	background: #ff4500;
-	border-radius: 65px;
-	margin: 0 auto;
-}
-.advantages-item.with-text .advantages-name{
+
+.advantages-item.open .advantages-name{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -452,6 +484,7 @@ h1{
 	min-height: 85px;
 	margin-bottom: 70px;
 }
+
 .advantages-item-descr{
 	padding: 0 15px;
 	line-height: 20px;
@@ -476,6 +509,7 @@ h1{
 	vertical-align: middle;
 	margin-right: 7px;
 }
+
 .section.howbuy{
 	padding-top: 210px;
 }
@@ -860,7 +894,7 @@ footer{
 		margin-right: 13px;
 		min-height: 780px;
 	}
-	.advantages-item.with-img .advantages-name{
+	.advantages-item.close .advantages-name{
 		margin-bottom: 175px;
 	}
 	.section.howbuy{
@@ -894,6 +928,26 @@ footer{
 		max-width: 920px;
 	}
 }
+@media(max-width: 991px){
+	.mob_howbuy-img{
+		top: -275px;
+		background-image: url(../../src/images/drop.png);
+		background-position: center;
+		background-position-y: -70px;
+		position: relative;
+		left: 0;
+		width: 100%;
+		z-index: 135;
+		height: 695px;
+		background-size: 190%;
+		background-repeat: no-repeat;
+	}
+	.mob_howbuy-img img{
+	    position: absolute;
+	    bottom: 40px;
+	    right: 30px;
+	}
+}
 @media(min-width: 768px) and (max-width: 991px){
 	.top_line .logo{
 		margin-right: 20px;
@@ -906,8 +960,11 @@ footer{
 		right: -5%;
 		padding: 40px 10px 20px 10px;
 	}
+	.footer_copyright-block{
+		border-top: 0;
+	}
 }
-@media(max-width: 768px){
+@media(max-width: 767px){
 	h1{
 		font-size: 40px;
 	}
@@ -1028,7 +1085,7 @@ footer{
 		display: block;
 		position: absolute;
 		height: 100%;
-		border: 1px dashed #ADADAD;;
+		border: 1px dashed #ADADAD;
 		z-index: 5;
 	}
 	.howbuy-stage:last-child:after{
@@ -1040,6 +1097,7 @@ footer{
 		padding: 0;
 		max-width: 60%;
 		margin-left: 30%;
+		background: unset;
 	}
 	.stage-tooltip p{
 		display: flex;
@@ -1170,6 +1228,9 @@ footer{
 	.footer_copyright-block p{
 		text-align: center;
 		color: #AEAEAE;
+	}
+	.footer-logo{
+		display: none;
 	}
 }
 
