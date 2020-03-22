@@ -399,7 +399,8 @@ h1{
 .advantages-preview img{
 	display: block;
 	margin: 0 auto;
-	max-height: 230px;
+	max-height: 220px;
+	min-height: 220px;
 }
 
 .advantages-preview{
@@ -419,7 +420,7 @@ h1{
 	margin: 0 auto;
 }
 
-.advantages-text{
+.advantages-item.open .advantages-text{
 	position: absolute;
 	padding-top: 20px;
 	bottom: 0;
@@ -449,6 +450,8 @@ h1{
 .advantages-item.closes .advantages-text{
 	bottom: -100%;
 	height: 0;
+	padding: 0;
+	overflow: hidden;
 	transition: bottom .3s ease;
 }
 
@@ -929,6 +932,84 @@ footer{
 	}
 }
 @media(max-width: 991px){
+	.advantages-list{
+		padding-bottom: 100px;
+	}
+	.advantages-item{
+		width: 100%;
+		min-height: unset;
+		margin-right: 0;
+		margin-bottom: 30px;
+		padding: 20px 30px 15px 30px;
+	}
+	.advantages-item:after{
+		content: '';
+		position: absolute;
+		display: block;
+		height: 4px;
+		left: 30px;
+		bottom: 15px;
+		width: 85%;
+		background: #ff4500;
+	}
+	.advantages-item:last-child{
+		margin-bottom: 0;
+	}
+	.advantages-preview{
+		position: static;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 0;
+	}
+	.advantages-item.open .advantages-text{
+		padding-bottom: 30px;
+	}
+
+	.advantages-item.closes .advantages-text{
+		max-height: 0;
+		transition: max-height 0.3s ease;
+	}
+	.advantages-item.closes .advantages-preview{
+		margin-bottom: 35px;
+	}
+	.advantages-item.closes .advantages-preview:after{
+		display: none;
+		width: 100%;
+		max-width: unset;
+		height: 4px;
+		margin: 35px auto 0 auto;
+	}
+	.advantages-preview img{
+		max-width: 95px;
+		min-height: unset;
+		margin: unset;
+	}
+	.advantages-item .advantages-preview .advantages-name{
+		margin: 0;
+		font-size: 16px;
+		padding-left: 35px;
+		max-width: 50%;
+		line-height: 18px;
+		text-align: left;
+	}
+	.advantages-item.open .advantages-name{
+		margin: 0;
+	}
+	.advantages-item .advantages-text .advantages-name,
+	.advantages-item.open .advantages-text:before{
+		display: none;
+	}
+	.advantages-item.open .advantages-text{
+		position: static;
+		max-height: 1000px;
+		transition: max-height 0.3s ease;
+	}
+	.advantages-item-descr{
+		font-size: 14px;
+		padding: 0;
+	}
 	.mob_howbuy-img{
 		top: -275px;
 		background-image: url(../../src/images/drop.png);
