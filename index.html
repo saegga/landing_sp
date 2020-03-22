@@ -258,7 +258,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-12 footer-left">
-					<div class="footer_contacts-block">
+					<div class="mob_footer-logo d-block d-md-none">
+						<img src="../../src/images/mob_footer-logo.png" alt="">
+					</div>
+					<div class="footer_contacts-block order-2">
 						<div class="footer-addres">
 							<i></i>
 							<span>Blagoveshchensk, st. 50 Years of October, 61, 202</span>
@@ -268,7 +271,7 @@
 							<a href="tel:5555">+7 (914) 398-41-00</a>
 						</div>
 					</div>
-					<div class="footer_form-block">
+					<div class="footer_form-block order-1">
 						<form action="" class="f_write_us">
 							<div class="f_write_us-left">
 								<label>
@@ -277,16 +280,19 @@
 								<label>
 									<input type="text" placeholder="Phone" class="inp_text">
 								</label>
-								<div class="f_write_us-submit">
+								<div class="f_write_us-submit d-none d-md-block">
 									<input type="submit" class="" value="write_us">
 								</div>
 							</div>
 							<div class="f_write_us-right">
 								<textarea name="" placeholder="Comment" class="textarea"></textarea>
 							</div>
+							<div class="f_write_us-submit d-block d-md-none">
+								<input type="submit" class="" value="write_us">
+							</div>
 						</form>
 					</div>
-					<div class="footer_copyright-block">
+					<div class="footer_copyright-block d-none d-md-block">
 						<div class="footer-logo">
 							<img src="../../src/images/footer_logo.png" alt="">
 						</div>
@@ -295,8 +301,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4">
-<!-- 					<iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A88cef89c0705da17e94625349f68ad23fec08e017e66c00519446996baa307f2&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe> -->
+				<div class="col-lg-4 map-container">
+					<iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A88cef89c0705da17e94625349f68ad23fec08e017e66c00519446996baa307f2&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe>
+				</div>
+				<div class="col-12 footer_copyright-block d-block d-md-none">
+					<div class="allrights">
+						<p>2020, <b>Procosmetiku.com</b>, all rights reserved</p>
+					</div>
 				</div>
 			</div>
 		</div>

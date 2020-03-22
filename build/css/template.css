@@ -996,6 +996,9 @@ footer{
 		height: 690px;
 		background: url(../../src/images/mob_banner.png) center center/cover  no-repeat ;
 	}
+/*	main{
+		margin-bottom: -450px;
+	}*/
 	.header-btn{
 		padding-top: 60px;
 	}
@@ -1168,9 +1171,9 @@ footer{
 	}
 	.mob_howbuy-img{
 		top: -275px;
-		background: url(../../src/images/drop.png);
+		background-image: url(../../src/images/drop.png);
 		background-position: center;
-		background-position-y: -100px;
+		background-position-y: -70px;
 		position: relative;
 		left: 0;
 		width: 100%;
@@ -1179,6 +1182,16 @@ footer{
 		-webkit-background-size: 190% 190%;
 		background-size: 190%;
 		background-repeat: no-repeat;
+	}
+	.mob_howbuy-img img{
+	    position: absolute;
+	    bottom: 40px;
+	    right: 30px;
+	}
+	footer{
+		margin-top: -260px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
 	}
 
 }
